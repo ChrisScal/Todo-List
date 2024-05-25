@@ -71,10 +71,16 @@ def edit_page(index):
 def load_todos():
     if request.form["todo_dict"]:
         file = open(request.form["todo_dict"])
-        todo_dict = json.load(file)
-        for i in todo_dict:
-            todo_list.append(i)
-        file.close()
+        try:
+            todo_dicts = json.load(file)
+            for i in todo_dicts:
+                todo_list.append(i)
+            file.close()
+        except: 
+            #ERROR
+            print("!ERROR!")
+            todo_dicts = 0
+            return f"Error: File Empty, please go back and try another file."
     return redirect(url_for('index'))
 
 @app.route("/save")
