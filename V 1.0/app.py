@@ -15,7 +15,7 @@ def locate_index(todo_list = [], todo_str = str):
 def save_todos(todo_list = []):
     with open("todos.json","w") as outgoing:
         json.dump(todo_list,outgoing)
-        outgoing.close()
+    outgoing.close()
 
 
 @app.route("/")
@@ -76,5 +76,11 @@ def load_todos():
             todo_list.append(i)
         file.close()
     return redirect(url_for('index'))
+
+@app.route("/save")
+def filesave():
+    save_todos(todo_list)
+    return redirect(url_for("index"))
+
 if __name__ == "__main__":
     app.run(debug=True)
