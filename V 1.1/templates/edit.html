@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Editing</title>
+    </head>
+
+    <body>
+        <h1>Editing </h1>
+        <form method="post" action="{{url_for('edit_page',index = index)}}">
+            <input type="text"
+                    placeholder="Edit Todo"
+                    name="edit_todo"
+                    autocomplete="off"
+                    autofocus="on">
+            <button type="submit"> Edit</button>
+        </form>
+    </body>
+
+</html>
