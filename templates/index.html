@@ -34,6 +34,10 @@
             .todo_check:checked + label{
                 text-decoration: line-through;  
             }
+            .save{
+                font-size: 18px;
+                font-family: 'Times New Roman', Times, serif;
+            }
         </style>
 
     </head>
@@ -95,6 +99,7 @@
             </ul>
         </div>
 
+        <p class="save">If you want to save your todos press <a href="/save">here</a></p>
 
         <!--Add todo-->
         <h2 >Add todo</h2>
@@ -106,5 +111,15 @@
                     size="25">
             <button type="submit" > Add</button>
         </form>
+        <p></p>
+        <div>
+            <h2>Load From File (.json)</h2>
+            <form method="post" action="/load">
+                <input type="file" id="todo_dict"
+                name="todo_dict" accept=".json">
+                <button type="submit">Load</button>
+            </form>
+        </div>
+
     </body>
 </html>
