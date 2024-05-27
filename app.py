@@ -6,11 +6,7 @@ todo_list = [] #Example Todos , delete later
 #Single Todo  = dictionary 
 #Todo States: 1)Done
 #             2) Ongoing
-def locate_index(todo_list = [], todo_str = str):
-    if len(todo_list)>0:
-        for index in range(len(todo_list)):
-            if todo_list[index]["todo"] == todo_str:
-                return index
+
 
 def save_todos(todo_list = []):
     with open("todos.json","w") as outgoing:
