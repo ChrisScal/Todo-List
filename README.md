@@ -1,5 +1,10 @@
-# Todo-List
+# Todo-List with Python Flask
+Ατομική εργασία για το μάθημα Εισαγωγή στην Επιστήμη του Ηλεκτρολόγου Μηχανικού 2023-2024 του φοιτητή Χρήστου Σκαλιαρίνι
 
-Basiko Todo list app me Python Flask 
+Μια to do list εφαρμογή χρησιμοποιόντας το Flask framework. Η εφαρμογή δίνει την δυνατότητα προσθήκης, επεξεργασίας και διαγραφής to do, την επιλογή να ορίσεις κάθε to do ως completed ή ongoing, την δυνατότητα αποθήκευσης σε file αλλά και load από file.  
 
-Requirements
+Requirements:
+-------------
+Python 3.12
+
+Flask 3.0.3
